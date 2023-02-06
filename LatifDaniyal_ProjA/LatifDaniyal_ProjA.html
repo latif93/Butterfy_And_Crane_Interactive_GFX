@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title> Butterfly Somehow Not Getting Hit By Crane</title>
+  </head>
+	<!--	Create the HTML5 'canvas' element in which we will run WebGL  -->
+  <body onload="main()">
+    <canvas id="webgl" width="300" height="300">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+	Press DOWN ARROW and UP ARROW to lower and raise the wrecking ball!
+	Also, DRAG the mouse on the canvas to position the butterfly wherever you want! If any animations get stuck, please refresh...<br>
+    	</t>  <br>
+		<div id='Mouse'>  </div>
+		<p>
+			<!-- Make a 'div' element to hold changeable HTML made in our JavaScript file;
+				 (where? look inside main(), inside its 'tick()' function, where we
+				 display the 'current angle' value.
+			-->
+			<div id= CurAngleDisplay></div> 
+			<!-- Next, make a simple block of text 
+			-->
+			 
+			<!-- Next, make an HTML 'input' box element, a text-box 10 chars wide where users
+				can type in text.  Give it an ID name so that our JavaScript program
+				(e.g. ControlMulti.js, loaded near the end of this file) can access this
+				HTML element by name in the 'tick' function.
+
+			</p>
+		<p>
+	BUTTONS: commands below create HTML push-buttons with labels
+		Spin <<, runStop, and Spin >>.  
+	When users click the button, HTML calls JavaScript functions
+		"spinDown()", "runStop()" and "spinUp()"   -->
+		<button type="button" onclick="runStop()">Run/Stop</button>
+
+</p>
+
+		<br>
+		<span id='KeyDownResult'  >    </span> <!-- myKeyDown() modifies this span object -->		
+		<br>
+		<span id='KeyModResult'   > <br><br>   </span> <!-- myKeyDown() modifies this span object -->
+		<br>
+		<span id='MouseAtResult'  >  </span> <!-- myMouseMove() modifies this span object -->
+		<br>
+		<span id='MouseDragResult'> </span> <!-- myMouseUp() modifies this span object -->
+
+	<!--  Mouse click/drag amounts.  Look in 'console' for event reports;
+			the 'clear' button calls Javascript function 'clearDrag()'
+			whose sole purpose is to set global vars xMdragTot,yMdragTot ==0.0
+		  Note we use these totals to rotate the triangle at upper left.
+	-->
+		
+	<!--	Load in the JavaScript libraries supplied by our textbook 
+			(Matsuda et al., 2013 WebGL Programming Guide) that help us
+			with WebGL programming:
+	-->
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/webgl-debug.js"></script>
+    <script src="./lib/cuon-utils.js"></script>
+    <script src="./lib/cuon-matrix-quat03.js"></script>
+	<!--	Finally, load in our own JavaScript program file.
+	-->
+    <script src="LatifDaniyal_ProjA.js"></script>
+  </body>
+</html>
